@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: bite_speed_task
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "node index.js"
+    envVars:
+      - key: DATABASE_URL
+        value: "./your-database-file.sqlite"
